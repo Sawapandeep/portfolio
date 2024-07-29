@@ -7,6 +7,10 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+/* Ensure the image returns to the top on hover exit */
+.hover\:translate-y-full:hover {
+  transform: translateY(-100%);
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
