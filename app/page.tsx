@@ -1,8 +1,8 @@
 import ScrollHook from "./components/animation/ScrollHook";
+import Card from "./containers/Card";
 import HeroSection from "./containers/HeroSection";
 import MissionSection from "./containers/MissionSection";
 import SkillSection from "./containers/SkillsSection";
-import horizon from '@/public/Images/horizon.png';
 
 
 export default function Home() {
@@ -13,6 +13,8 @@ export default function Home() {
       <HeroSection />
       <ScrollHook><MissionSection /></ScrollHook>
       <ScrollHook><SkillSection /></ScrollHook>
+      <Card />
+
     </main>
   );
 }

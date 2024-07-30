@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/app/lib/utils";
-import DotPattern from "@/app/components/magicui/DotPattern";
+import DotPattern from "@/app/components/magicui/RetroGrid";
 
 const DotSection = () => {
     return (

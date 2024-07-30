@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Chat Collect",
+            "description": "",
+            "Timeline": "Jan 2024 - Feb 2024",
+            "active": true,
+            "technologies": [
+                "Next.js",
+                "Magic UI"
+            ],
+            "links": [
+                {
+                    "type": "Website",
+                    "href": "https://chatcollect.com"
+                }
+            ],
+            "image": "https://blocks.primereact.org/demo/images/blocks/nature/nature-2.png",
+            "video": ""
+        },
+        {
+            "id": 2,
+            "title": "Chat Collect",
+            "description": "",
+            "Timeline": "Jan 2024 - Feb 2024",
+            "active": true,
+            "technologies": [
+                "Next.js",
+                "Typescript",
+                "PostgreSQL",
+                "Prisma",
+                "TailwindCSS",
+                "Stripe",
+                "Shadcn UI",
+                "Magic UI"
+            ],
+            "links": [
+                {
+                    "type": "Website",
+                    "href": "https://chatcollect.com"
+                },
+                {
+                    "type": "Source",
+                    "href": "https://github.com/magicuidesign/magicui"
+                }
+            ],
+            "image": "",
+            "video": "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4"
+        }
+    ]
+}

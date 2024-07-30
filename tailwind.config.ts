@@ -19,6 +19,7 @@ const config: Config = {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
         meteor: "meteor 5s linear infinite",
         fadeIn: 'fadeIn 1s ease-out',
+        grid: "grid 15s linear infinite",
       },
       keyframes: {
         orbit: 
@@ -35,6 +36,10 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(50px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
         },
     },
   },

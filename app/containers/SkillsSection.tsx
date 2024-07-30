@@ -36,7 +36,7 @@
 
 //!v2
 // SkillSection.tsx
-
+import RetroGrid from '../components/magicui/RetroGrid';
 import IconCloud from '@/app/components/magicui/IconCloud'; // Adjust the import 
 
 const SkillSection = () => {
@@ -49,6 +49,7 @@ const SkillSection = () => {
                 <div id='skillCloud' className='block justify-center items-center content-center rounded-3xl ba' >
 
                     <IconCloud />
+                    {/* <RetroGrid /> */}
 
                 </div>
 
