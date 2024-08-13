@@ -1,52 +1,74 @@
-{
-    "projects": [
-        {
-            "id": 1,
-            "title": "Chat Collect",
-            "description": "",
-            "Timeline": "Jan 2024 - Feb 2024",
-            "active": true,
-            "technologies": [
-                "Next.js",
-                "Magic UI"
-            ],
-            "links": [
-                {
-                    "type": "Website",
-                    "href": "https://chatcollect.com"
-                }
-            ],
-            "image": "https://blocks.primereact.org/demo/images/blocks/nature/nature-2.png",
-            "video": ""
-        },
-        {
-            "id": 2,
-            "title": "Chat Collect",
-            "description": "",
-            "Timeline": "Jan 2024 - Feb 2024",
-            "active": true,
-            "technologies": [
-                "Next.js",
-                "Typescript",
-                "PostgreSQL",
-                "Prisma",
-                "TailwindCSS",
-                "Stripe",
-                "Shadcn UI",
-                "Magic UI"
-            ],
-            "links": [
-                {
-                    "type": "Website",
-                    "href": "https://chatcollect.com"
-                },
-                {
-                    "type": "Source",
-                    "href": "https://github.com/magicuidesign/magicui"
-                }
-            ],
-            "image": "",
-            "video": "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4"
-        }
-    ]
-}
+    {
+        "projects": [
+            {
+                "Title": "Dictionary API",
+                "Description": "Discover words effortlessly with our Dictionary API: quick, reliable, and packed with random word magic!",
+                "Timeline": "Jun 2024 - Jul 2024",
+                "Active": false,
+                "Technologies": [
+                    "express",
+                    "",
+                    ""
+                ],
+                "Weblink": "https://dictionary-api-ftv7.onrender.com",
+                "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/masteR",
+                "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                "Video": ""
+            },
+            {
+                "Title": "Malware Anlysing Server",
+                "Description": "Develoed a  malware analysis server with ClamAV, ReactJS, and Node.js. Efficiently scan and analyze threats.",
+                "Timeline": "Dec 2023 - Apr 2024",
+                "Active": false,
+                "Technologies": [
+                    "express",
+                    "clamdAV",
+                    ""
+                ],
+                "Weblink": "https://dictionary-api-ftv7.onrender.com",
+                "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/masteR",
+                "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                "Video": ""
+            },
+            {
+                "Title": "Game Blog",
+                "Description": " Your go-to source for the latest gaming news, reviews, and industry insights.",
+                "Timeline": "Jun 2023 - Aug 2023",
+                "Active": true,
+                "Technologies": [
+                    "Next.js",
+                    "Typescript",
+                    "PostgreSQL",
+                    "Prisma",
+                    "TailwindCSS",
+                    "Stripe",
+                    "Shadcn UI",
+                    "Magic UI"
+                ],
+                "Weblink": "https://horizon-iceberg.pages.dev/",
+                "Srclink": "https://github.com/Sawapandeep/Horizon_Iceberg",
+                "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                "Video": ""
+            },
+            {
+                "Title": "Web Scraper bot",
+                "Description": "Developed an api to fetch the latest gaming news from GameRant, updated every on every rrefresh/fetch.",
+                "Timeline": "Apr 2023 - May 2023",
+                "Active": false,
+                "Technologies": [
+                    "Next.js",
+                    "Typescript",
+                    "PostgreSQL",
+                    "Prisma",
+                    "TailwindCSS",
+                    "Stripe",
+                    "Shadcn UI",
+                    "Magic UI"
+                ],
+                "Weblink": "https://trending-gaming-api.onrender.com/fetch",
+                "Srclink": "https://github.com/Sawapandeep/Web-scrapper-api",
+                "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                "Video": ""
+            }
+        ]
+    }

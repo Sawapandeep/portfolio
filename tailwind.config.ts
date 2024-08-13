@@ -22,11 +22,7 @@ const config: Config = {
         grid: "grid 15s linear infinite",
       },
       keyframes: {
-        orbit: 
-        {
-          "0%": {transform:"rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)"},
-          "100%": {transform:"rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)"},
-        },
+      
         meteor: 
         {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
@@ -34,7 +30,7 @@ const config: Config = {
           "100%": {transform: "rotate(215deg) translateX(-500px)",opacity: "0"},
         },
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(50px)' },
+          '0%': { opacity: '0',  transform: 'translateY(50px)', color: 'black' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         grid: {
@@ -62,6 +58,7 @@ const config: Config = {
       },
     ],
   },
+  
 };
 
 

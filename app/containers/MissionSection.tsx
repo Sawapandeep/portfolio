@@ -3,7 +3,7 @@ import possibility from '@/public/Images/possibility.png';
 
 const MissionSection = () => {
     return (
-        <div id='missionSection' className='flex overflow-hidden mb-12 px-7 pb-8 justify-around items-center gap-x-0 gap-y-0'>
+        <div id='missionSection' className='flex overflow-hidden  px-7 pb-8 justify-around items-center gap-x-0 gap-y-0 bg-black'>
             <div id='missionContainer' className='overflow-visible max-w-none order-none pb-0 mx-auto'>
                 <div
                     id='missionBlock'

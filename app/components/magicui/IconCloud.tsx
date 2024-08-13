@@ -70,6 +70,7 @@ const IconSlugs = [
     "css3",
     "nodedotjs",
     "express",
+    "cplusplus  ",
     "nextdotjs",
     "prisma",
     "firebase",

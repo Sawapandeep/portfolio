@@ -1,0 +1,78 @@
+{
+    "projects": [
+        {
+            "Title": "Web Scraper Bot",
+            "Type": "API",
+            "Description": "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+            "StartDate": "April 2023",
+            "Active": false,
+            "Technologies": [
+                "Next.js",
+                "Typescript",
+                "PostgreSQL",
+                "Prisma",
+                "TailwindCSS",
+                "Stripe",
+                "Shadcn UI",
+                "Magic UI"
+            ],
+            "Weblink": "https://trending-gaming-api.onrender.com/fetch",
+            "Srclink": "https://github.com/Sawapandeep/Web-scrapper-api",
+            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Video": ""
+        },
+        {
+            "Title": "Game Blog",
+            "Type": "Frontend",
+            "Description": "Your go-to source for the latest gaming news, reviews, and industry insights.",
+            "StartDate": "June 2023",
+            "Active": true,
+            "Technologies": [
+                "Next.js",
+                "Typescript",
+                "PostgreSQL",
+                "Prisma",
+                "TailwindCSS",
+                "Stripe",
+                "Shadcn UI",
+                "Magic UI"
+            ],
+            "Weblink": "https://horizon-iceberg.pages.dev/",
+            "Srclink": "https://github.com/Sawapandeep/Horizon_Iceberg",
+            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Video": ""
+        },
+        {
+            "Title": "Malware Analyzing Server",
+            "Type": "Backend",
+            "Description": "Developed a malware analysis server with ClamAV, ReactJS, and Node.js. Efficiently scan and analyze threats.",
+            "StartDate": "December 2023",
+            "Active": false,
+            "Technologies": [
+                "express",
+                "clamdAV",
+                ""
+            ],
+            "Weblink": "https://dictionary-api-ftv7.onrender.com",
+            "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
+            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Video": ""
+        },
+        {
+            "Title": "Dictionary API",
+            "Type": "API",
+            "Description": "Discover words effortlessly with our Dictionary API: quick, reliable, and packed with random word magic!",
+            "StartDate": "July 2024",
+            "Active": false,
+            "Technologies": [
+                "express",
+                "",
+                ""
+            ],
+            "Weblink": "https://dictionary-api-ftv7.onrender.com",
+            "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
+            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Video": ""
+        }
+    ]
+}

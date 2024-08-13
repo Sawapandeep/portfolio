@@ -1,81 +1,37 @@
 'use client';
-import React from 'react';
-import Image from 'next/image';
+import Card from '@/app/components/acternityui/Card';
 import data from '@/app/data/data.json';
+import React, { useState } from 'react';
 
 type Project = {
-    id: number;
     title: string;
     description: string;
     Timeline: string;
     active: boolean;
     technologies: string[];
-    links: {
-        type: string;
-        href: string;
-    }[];
+    weblink?: string;
+    srclink?: string;
     image?: string;
     video?: string;
 };
 
 const projects: Project[] = data.projects;
 
-const CardEle: React.FC<Project> = ({ title, description, Timeline, active, technologies, links, image, video }) => {
-    return (
-        <div className="col-12 md:col-6 xl:col-3 p-3">
-            <div className="surface-card shadow-2 border-round p-3" style={{ borderRadius: '6px' }}>
-                {image ? (
-                    <Image src={image} alt={title} width={600} height={400} className="mb-3 w-full" />
-                ) : video ? (
-                    <video
-                        src={video}
-                        className="mb-3 w-full rounded-md"
-                        autoPlay
-                        loop
-                        muted
-                    />
-                ) : null}
-                <div className="flex justify-between items-start">
-                    <div>
-                        <div className="text-xl font-medium text-900 mb-2">{title}</div>
-                        <p className="mt-0 mb-3 text-600">{description}</p>
-                    </div>
-                    <div>
-                        {links.map((link, index) => (
-                            <a
-                                key={index}
-                                href={link.href}
-                                className="p-button p-component p-button-rounded p-button-text p-button-icon-only"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="p-button-icon p-c pi pi-external-link"></span>
-                            </a>
-                        ))}
-                    </div>
-                </div>
-                <ul className="list-none m-0 p-0">
-                    <li className="px-0 py-2 flex justify-between items-center border-b border-gray-300">
-                        <span className="text-600 font-medium text-sm">Timeline</span>
-                        <span className="text-900 font-medium text-sm">{Timeline}</span>
-                    </li>
-                    <li className="px-0 py-2 flex justify-between items-center border-b border-gray-300">
-                        <span className="text-600 font-medium text-sm">Active</span>
-                        <span className="text-900 font-medium text-sm">{active ? "Yes" : "No"}</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    );
-};
+const ProjectSection: React.FC = () => {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-const Card: React.FC = () => {
     return (
-        <div className="block-content">
-            <div className="surface-ground px-4 py-8 md:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    {projects.map(project => (
-                        <CardEle key={project.id} {...project} />
+        <div id='ProjectSection' className="block-content">
+            <div id='ProjectContainer' className="surface-ground px-4 py-8 md:px-6 lg:px-8">
+                <div id='ProjectCard' className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {projects.map((project, index) => (
+                        <Card
+                            key={index}
+                            index={index}
+                            hoveredIndex={hoveredIndex}
+                            setHoveredIndex={setHoveredIndex}
+                            {...project}
+                        />
                     ))}
                 </div>
             </div>
@@ -83,7 +39,45 @@ const Card: React.FC = () => {
     );
 };
 
-export default Card;
+export default ProjectSection;
+
+
+// 'use client';
+// import Card from '@/app/components/acternityui/Card';
+// import data from '@/app/data/data.json';
+// import React from 'react';
+
+
+// type Project = {
+//     title: string;
+//     description: string;
+//     Timeline: string;
+//     active: boolean;
+//     technologies: string[];
+//     links: {
+//         type: string;
+//         href: string;
+//     }[];
+//     image?: string;
+//     video?: string;
+// }; const projects: Project[] = data.projects;
+
+// const ProjectSection: React.FC = () => {
+//     return (
+//         <div className="block-content">
+//             <div className="surface-ground px-4 py-8 md:px-6 lg:px-8">
+//                 <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6">
+//                     {projects.map((project, index) => (
+//                         <Card key={index} {...project} />
+//                     ))}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default ProjectSection;
+
 
 
 
@@ -103,11 +97,11 @@ export default Card;
 //     mediaType: 'image' | 'video';
 // }
 
-// const Card: React.FC = () => {
+// const ProjectSection: React.FC = () => {
 //     const { Projects } = data as { Projects: MediaData[] };
 
 //     return (
-//         <div className="surface-card shadow-2 border-round p-3 rounded-lg">
+//         <div className="surface-ProjectSection shadow-2 border-round p-3 rounded-lg">
 //             {Projects.map((item, index) => (
 //                 <div key={index} className="border rounded-lg p-3 bg-white">
 //                     {item.mediaType === 'image' ? (
@@ -155,4 +149,4 @@ export default Card;
 //     );
 // };
 
-// export default Card;
+// export default ProjectSection;

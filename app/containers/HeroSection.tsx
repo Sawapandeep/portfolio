@@ -1,5 +1,5 @@
 "use client";
-import myImage from "@/public/Images/myImage-2.png";
+import myImage from "@/public/Images/myImage.png";
 import { IBM_Plex_Mono } from "next/font/google";
 import Image from "next/image";
 import { FlipWords } from "../components/acternityui/FlipWords";
@@ -18,7 +18,7 @@ const HeroSection = () => {
     //    "नमस्ते"
 
     return (
-        <div id="HeroSection" className="relative flex overflow-hidden justify-around h-[80vh] items-center gap-x-0 gap-y-0 mb-[50px] pb-9 px-[30px]">
+        <div id="HeroSection" className="relative  flex overflow-hidden justify-around h-[80vh] items-center gap-x-0 gap-y-0  pb-9 px-[30px] bg-black">
             <StarsBackground />
             <div id="heroContainer" className="relative z-10 overflow-visible max-w-none order-none pb-0">
                 <div id="heroQuickstack" className="grid grid-cols-2 grid-rows-none w-auto max-w-[60vw] gap-x-0 gap-y-0.5 mb-0 px-0 py-2.5">
