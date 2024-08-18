@@ -1,10 +1,11 @@
 "use client";
 
-import { TextGenerate } from '@/app/components/acternityui/TextGenerate'; // Import the TextGenerate component
-import timelineData from '@/app/data/timelinedata.json'; // Importing the timeline data
+import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
+import timelineData from '@/app/data/timelinedata.json';
 import { useInView } from "framer-motion";
 import Image from 'next/image';
-import { useRef } from "react";
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from "react";
 
 interface TimelineItemProps {
     Title: string;
@@ -20,8 +21,22 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     Image: imgSrc,
 }) => {
     const ref = useRef(null);
-    //@ts-ignore
-    const inView = useInView(ref, { triggerOnce: true });
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const inView = useInView(ref);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (inView && !hasAnimated) {
+            setHasAnimated(true);
+        }
+    }, [inView, hasAnimated]);
+
+    const handleMoreClick = () => {
+        const projectId = timelineData.projects.find(proj => proj.Title === Title)?.id;
+        if (projectId) {
+            router.push(`/CaseStudies?id=${projectId}`);
+        }
+    };
 
     return (
         <div ref={ref} id='TimelineItem' className="grid grid-cols-1 md:grid-cols-[1fr_180px_1fr] gap-0 py-20 relative">
@@ -33,19 +48,24 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
             <div id='TimelineCenter' className="flex justify-center">
                 <div id='TimelineCircle' className="bg-white rounded-full w-[15px] h-[15px] sticky top-[50vh] shadow-[0_0_0_4px_#0a0a0a]" />
             </div>
-            <div>
-                <div id='TimelineRight' className="mb-8">
-                    <div>
-                        <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold'>{Title}</h1>
-                        {inView && (
-                            <TextGenerate
-                                words={Description}
-                                className="text-xs md:text-sm font-medium leading-snug"
-                            />
-                        )}
-                    </div>
+            <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b]">
+                <div>
+                    <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold pl-4 py-4'>{Title}</h1>
+                    {hasAnimated ? (
+                        <TextGenerate
+                            words={Description}
+                            className="text-xs md:text-sm font-medium leading-snug pl-4"
+                            filter={true}
+                            duration={1}
+                        />
+                    ) : (
+                        <div className="text-xs md:text-sm font-medium leading-snug pl-4">
+                            {Description}
+                        </div>
+                    )}
                 </div>
-                <div id='TimelineImageWrapper' className="bg-black bg-opacity-70 p-5 rounded-lg">
+
+                <div id='TimelineImageWrapper' className=" bg-opacity-70 p-5 rounded-lg">
                     <Image
                         src={imgSrc}
                         alt={Title}
@@ -55,6 +75,12 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                         priority
                     />
                 </div>
+                <button
+                    onClick={handleMoreClick}
+                    className='border-2 rounded-lg border-white text-lg ml-4 mb-4'
+                >
+                    More.
+                </button>
             </div>
         </div>
     );
@@ -65,12 +91,11 @@ const Timeline: React.FC = () => {
         <div id='SectionTimeline' className="relative z-[-3]">
             <div id='Container' className="mx-auto max-w-[1360px] px-4">
                 <div id='TimelineComponent' className="flex flex-col items-center justify-center relative">
-                    <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-gray-700 w-[3px] h-full z-[-2]" />
-                    <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#ff7448] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
-                    {/* Loop through the timeline data and render TimelineItems */}
-                    {timelineData.projects.map((project, index) => (
+                    <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
+                    <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
+                    {timelineData.projects.map((project) => (
                         <TimelineItem
-                            key={index}
+                            key={project.id}
                             Title={project.Title}
                             StartDate={project.StartDate}
                             Description={project.Description}
@@ -79,13 +104,234 @@ const Timeline: React.FC = () => {
                     ))}
                 </div>
             </div>
-            <div id='OverlayTop' className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#0a0a0a] to-transparent z-[-1]" />
-            <div id='OverlayBottom' className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent z-[-1]" />
+            <div id='OverlayTop' className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black to-transparent z-[-1]" />
+            <div id='OverlayBottom' className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-[-1]" />
         </div>
     );
 };
 
 export default Timeline;
+
+
+//!V8 befor sending just id
+// "use client";
+
+// import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
+// import timelineData from '@/app/data/timelinedata.json';
+// import { useInView } from "framer-motion";
+// import Image from 'next/image';
+// import { useEffect, useRef, useState } from "react";
+// import { useRouter } from 'next/navigation'; // Use next/navigation instead of next/router
+
+// interface TimelineItemProps {
+//     Title: string;
+//     StartDate: string;
+//     Description: string;
+//     Image: string;
+// }
+
+// const TimelineItem: React.FC<TimelineItemProps> = ({
+//     Title,
+//     StartDate,
+//     Description,
+//     Image: imgSrc,
+// }) => {
+//     const ref = useRef(null);
+//     const [hasAnimated, setHasAnimated] = useState(false);
+//     const inView = useInView(ref);
+//     const router = useRouter(); // This useRouter is from next/navigation
+
+//     useEffect(() => {
+//         if (inView && !hasAnimated) {
+//             setHasAnimated(true);
+//         }
+//     }, [inView, hasAnimated]);
+
+//     const handleMoreClick = () => {
+//         const projectId = timelineData.projects.find(proj => proj.Title === Title)?.id;
+//         if (projectId) {
+//             router.push(`/CaseStudies?id=${projectId}`);
+//         }
+//     };
+
+//     return (
+//         <div ref={ref} id='TimelineItem' className="grid grid-cols-1 md:grid-cols-[1fr_180px_1fr] gap-0 py-20 relative">
+//             <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch">
+//                 <div id='TimelineDateText' className=" text-4xl md:text-6xl font-medium sticky top-[50vh]">
+//                     {StartDate}
+//                 </div>
+//             </div>
+//             <div id='TimelineCenter' className="flex justify-center">
+//                 <div id='TimelineCircle' className="bg-white rounded-full w-[15px] h-[15px] sticky top-[50vh] shadow-[0_0_0_4px_#0a0a0a]" />
+//             </div>
+//             <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b]">
+//                 <div>
+//                     <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold pl-4 py-4'>{Title}</h1>
+//                     {hasAnimated ? (
+//                         <TextGenerate
+//                             words={Description}
+//                             className="text-xs md:text-sm font-medium leading-snug pl-4"
+//                             filter={true}
+//                             duration={1}
+//                         />
+//                     ) : (
+//                         <div className="text-xs md:text-sm font-medium leading-snug pl-4">
+//                             {Description}
+//                         </div>
+//                     )}
+//                 </div>
+
+//                 <div id='TimelineImageWrapper' className=" bg-opacity-70 p-5 rounded-lg">
+//                     <Image
+//                         src={imgSrc}
+//                         alt={Title}
+//                         width={480}
+//                         height={270}
+//                         className="rounded-lg"
+//                         priority
+//                     />
+//                 </div>
+//                 <button
+//                     onClick={handleMoreClick}
+//                     className='border-2 rounded-lg border-white text-lg ml-4 mb-4'
+//                 >
+//                     More.
+//                 </button>
+//             </div>
+//         </div>
+//     );
+// };
+
+// const Timeline: React.FC = () => {
+//     return (
+//         <div id='SectionTimeline' className="relative z-[-3]">
+//             <div id='Container' className="mx-auto max-w-[1360px] px-4">
+//                 <div id='TimelineComponent' className="flex flex-col items-center justify-center relative">
+//                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
+//                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
+//                     {timelineData.projects.map((project) => (
+//                         <TimelineItem
+//                             key={project.id}
+//                             Title={project.Title}
+//                             StartDate={project.StartDate}
+//                             Description={project.Description}
+//                             Image={project.Image}
+//                         />
+//                     ))}
+//                 </div>
+//             </div>
+//             <div id='OverlayTop' className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black to-transparent z-[-1]" />
+//             <div id='OverlayBottom' className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-[-1]" />
+//         </div>
+//     );
+// };
+
+// export default Timeline;
+
+// !v8 before routing
+// "use client";
+
+// import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
+// import timelineData from '@/app/data/timelinedata.json';
+// import { useInView } from "framer-motion";
+// import Image from 'next/image';
+// import { useEffect, useRef, useState } from "react";
+
+// interface TimelineItemProps {
+//     Title: string;
+//     StartDate: string;
+//     Description: string;
+//     Image: string;
+// }
+
+// const TimelineItem: React.FC<TimelineItemProps> = ({
+//     Title,
+//     StartDate,
+//     Description,
+//     Image: imgSrc,
+// }) => {
+//     const ref = useRef(null);
+//     const [hasAnimated, setHasAnimated] = useState(false);
+
+//     // Track if the element is in view
+//     const inView = useInView(ref);
+
+//     useEffect(() => {
+//         if (inView && !hasAnimated) {
+//             setHasAnimated(true);
+//         }
+//     }, [inView, hasAnimated]);
+
+//     return (
+//         <div ref={ref} id='TimelineItem' className="grid grid-cols-1 md:grid-cols-[1fr_180px_1fr] gap-0 py-20 relative">
+//             <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch">
+//                 <div id='TimelineDateText' className=" text-4xl md:text-6xl font-medium sticky top-[50vh]">
+//                     {StartDate}
+//                 </div>
+//             </div>
+//             <div id='TimelineCenter' className="flex justify-center">
+//                 <div id='TimelineCircle' className="bg-white rounded-full w-[15px] h-[15px] sticky top-[50vh] shadow-[0_0_0_4px_#0a0a0a]" />
+//             </div>
+//             <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b]">
+//                 <div>
+//                     <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold pl-4 py-4'>{Title}</h1>
+//                     {hasAnimated && (
+//                         <TextGenerate
+//                             words={Description}
+//                             className="text-xs md:text-sm font-medium leading-snug pl-4"
+//                             filter={true}
+//                             duration={1}
+//                         />
+//                     )}
+//                     {!hasAnimated && (
+//                         <div className="text-xs md:text-sm font-medium leading-snug pl-4">
+//                             {Description}
+//                         </div>
+//                     )}
+//                 </div>
+
+//                 <div id='TimelineImageWrapper' className=" bg-opacity-70 p-5 rounded-lg">
+//                     <Image
+//                         src={imgSrc}
+//                         alt={Title}
+//                         width={480}
+//                         height={270}
+//                         className="rounded-lg"
+//                         priority
+//                     />
+//                 </div>
+//                 <button className=' border-2 rounded-lg border-white text-lg ml-4 mb-4'>More.</button>
+//             </div>
+//         </div>
+//     );
+// };
+
+// const Timeline: React.FC = () => {
+//     return (
+//         <div id='SectionTimeline' className="relative z-[-3]">
+//             <div id='Container' className="mx-auto max-w-[1360px] px-4">
+//                 <div id='TimelineComponent' className="flex flex-col items-center justify-center relative">
+//                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
+//                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
+//                     {/* Loop through the timeline data and render TimelineItems */}
+//                     {timelineData.projects.map((project, index) => (
+//                         <TimelineItem
+//                             key={project.id}
+//                             Title={project.Title}
+//                             StartDate={project.StartDate}
+//                             Description={project.Description}
+//                             Image={project.Image}
+//                         />
+//                     ))}
+//                 </div>
+//             </div>
+//             <div id='OverlayTop' className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black to-transparent z-[-1]" />
+//             <div id='OverlayBottom' className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-[-1]" />
+//         </div>
+//     );
+// };
+
+// export default Timeline;
 
 //!v7 text generate effect
 // "use client";

@@ -46,6 +46,8 @@ import express from './express.svg';
 import figma from './figma.svg';
 import firebase from './firebase.svg';
 import github from "./github.svg";
+import githubWhite from "./githubWhite.svg";
+import globe from "./globe.svg";
 import html from './html.svg';
 import java from './java.svg';
 import javascript from './javascript.svg';
@@ -60,5 +62,5 @@ import vscode from './vscode.svg';
 
 
 
-export { api, code, cplusplus, css3, express, figma, firebase, github, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, user, vercel, vscode };
+export { api, code, cplusplus, css3, express, figma, firebase, github, githubWhite , globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, user, vercel, vscode };
 
