@@ -47,7 +47,7 @@ const config: Config = {
         mytheme: {
           primary: "#a855f7",
           secondary: "#7e22ce",
-          accent: "#ff00ff",
+          accent: "#38bdf8",
           neutral: "#d8b4fe",
           "base-100": "#1c1917",
           info: "#38bdf8",

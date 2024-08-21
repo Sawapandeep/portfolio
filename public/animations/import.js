@@ -38,28 +38,8 @@
 
 
 // !v1
-import api from './api.svg';
-import code from './code.svg';
-import cplusplus from './cplusplus.svg';
-import css3 from "./css3.svg";
-import express from './express.svg';
-import figma from './figma.svg';
-import firebase from './firebase.svg';
-import github from "./github.svg";
-import globe from "./globe.svg";
-import html from './html.svg';
-import java from './java.svg';
-import javascript from './javascript.svg';
-import nextjs from './nextjs.svg';
-import nodejs from './nodejs.svg';
-import react from './react.svg';
-import tailwind from "./tailwind.svg";
-import typescript from './typescript.svg';
-import user from "./user.svg";
-import vercel from './vercel.svg';
-import vscode from './vscode.svg';
+import back  from './back.gif';
 
 
-
-export { api, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, user, vercel, vscode };
+export { back };
 

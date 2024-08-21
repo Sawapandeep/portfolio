@@ -8,6 +8,12 @@
             "StartDate": "April 2023",
             "EndDate": " June 2023",
             "Active": false,
+            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Stages": [
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+            ],
             "Technologies": [
                 "Next.js",
                 "Typescript",
@@ -18,7 +24,7 @@
                 "Shadcn UI",
                 "Magic UI"
             ],
-            "Weblink": "https://trending-gaming-api.onrender.com/fetch",
+            "Livelink": "https: //trending-gaming-api.onrender.com/fetch",
             "Srclink": "https://github.com/Sawapandeep/Web-scrapper-api",
             "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
             "Video": ""
@@ -31,6 +37,12 @@
             "StartDate": "June 2023",
             "EndDate": "August 2023",
             "Active": true,
+            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Stages": [
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+            ],
             "Technologies": [
                 "Next.js",
                 "Typescript",
@@ -41,7 +53,7 @@
                 "Shadcn UI",
                 "Magic UI"
             ],
-            "Weblink": "https://horizon-iceberg.pages.dev/",
+            "Livelink": "https://horizon-iceberg.pages.dev/",
             "Srclink": "https://github.com/Sawapandeep/Horizon_Iceberg",
             "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
             "Video": ""
@@ -54,12 +66,18 @@
             "StartDate": "December 2023",
             "EndDate": "March 2024",
             "Active": false,
+            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Stages": [
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+            ],
             "Technologies": [
                 "express",
                 "clamdAV",
                 ""
             ],
-            "Weblink": "https://dictionary-api-ftv7.onrender.com",
+            "Livelink": "https://dictionary-api-ftv7.onrender.com",
             "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
             "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
             "Video": ""
@@ -72,12 +90,18 @@
             "StartDate": "July 2024",
             "EndDate": " July 2024",
             "Active": false,
+            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Stages": [
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
+                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+            ],
             "Technologies": [
                 "express",
                 "",
                 ""
             ],
-            "Weblink": "https://dictionary-api-ftv7.onrender.com",
+            "Livelink": "https://dictionary-api-ftv7.onrender.com",
             "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
             "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
             "Video": ""
