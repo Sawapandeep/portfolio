@@ -9,8 +9,7 @@ import {
     TooltipTrigger,
 } from "@/app/components/shadcn-ui/ToolTip";
 import { cn } from "@/app/lib/utils";
-import { github, globe } from "@/public/Svg/import";
-import backGif from "@/public/animations/back2.gif"; // Import the GIF correctly
+import { github, globe, up } from "@/public/Svg/import";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +27,7 @@ const Icons = {
     ),
     back: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
         //@ts-ignore
-        <Image src={backGif} alt="Return" className="w-8 h-8" {...props} /> // Correctly reference the GIF here
+        <Image src={up} alt="Return" className="w-8 h-8" {...props} /> // Correctly reference the GIF here
     ),
 };
 
@@ -81,10 +80,10 @@ export function DockBar({ srclink, livelink, back }: { srclink: string; livelink
                                 href={back}
                                 className={cn(
                                     buttonVariants({ variant: "ghost", size: "icon" }),
-                                    "size-12 rounded-full",
+                                    "size-12 rounded-full -rotate-90",
                                 )}
                             >
-                                <Icons.back className="w-12 h-12" />
+                                <Icons.back className="w-6 h-6" />
                             </Link>
                         </TooltipTrigger>
                         <TooltipContent>

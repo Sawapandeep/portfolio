@@ -20,8 +20,17 @@ const config: Config = {
         meteor: "meteor 5s linear infinite",
         fadeIn: 'fadeIn 1s ease-out',
         grid: "grid 15s linear infinite",
+        gradient: 'gradient 5s ease infinite',
+      },
+      transform: {
+        'translate-z-10': 'translateZ(10px)',
+        // Add more values if needed
       },
       keyframes: {
+        gradient: {
+          '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+          '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+        },
       
         meteor: 
         {

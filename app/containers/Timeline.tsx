@@ -41,8 +41,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     return (
         <div ref={ref} id='TimelineItem' className="grid grid-cols-1 md:grid-cols-[1fr_180px_1fr] gap-0 py-20 relative">
             <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch">
-                <div id='TimelineDateText' className=" text-4xl md:text-6xl font-medium sticky top-[50vh]">
-                    {StartDate}
+                <div id='TimelineDateContainer' className=" text-4xl md:text-6xl font-medium sticky top-[50vh]" >
+                    <h1 id="TimelineDateText" className="text-white">{StartDate}</h1>
                 </div>
             </div>
             <div id='TimelineCenter' className="flex justify-center">

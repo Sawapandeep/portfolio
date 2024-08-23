@@ -55,11 +55,12 @@ import nodejs from './nodejs.svg';
 import react from './react.svg';
 import tailwind from "./tailwind.svg";
 import typescript from './typescript.svg';
+import up from './up.svg';
 import user from "./user.svg";
 import vercel from './vercel.svg';
 import vscode from './vscode.svg';
 
 
 
-export { api, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, user, vercel, vscode };
+export { api, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, up, user, vercel, vscode };
 
