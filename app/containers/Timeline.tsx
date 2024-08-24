@@ -39,7 +39,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     };
 
     return (
-        <div ref={ref} id='TimelineItem' className="relative z-[2] grid auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-20  max-md:w-full max-md:grid-cols-[64px_1fr] max-sm:grid-cols-[48px_1fr]">
+        <div ref={ref} id='TimelineItem' className="relative z-[2] grid auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-10  max-md:w-full max-md:grid-cols-[64px_1fr] max-sm:grid-cols-[48px_1fr]">
             <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch max-md:text-left max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2">
                 {/* col-end-3  to 1*/}
                 <div id='TimelineDateText' className="  md:text-6xl font-medium sticky top-[50vh] max-md:mb-6 max-md:text-4xl text-white text-right max-md:text-left " >

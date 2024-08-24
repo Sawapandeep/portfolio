@@ -38,7 +38,7 @@ const BentoGridItem = ({
     return (
         <div
             className={cn(
-                "group/bento relative p-4 transition-shadow duration-200 hover:shadow-lg min-xl:w-[70vw]  min-xl:mx-auto",
+                "group/bento relative md:p-4 transition-shadow duration-200 hover:shadow-lg   min-xl:mx-auto",
                 className
             )}
         >
@@ -64,7 +64,7 @@ const BentoGridItem = ({
 
 const ProjectBentoGrid = ({ bentoItems }: { bentoItems: any[] }) => {
     return (
-        <BentoGrid className="max-w-[77.5vw] mx-auto ">
+        <BentoGrid className="max-w-[77.5vw] max-md:max-w-[90vw] mx-auto ">
             {bentoItems.map((item, i) => (
                 <BentoGridItem
                     key={i}
