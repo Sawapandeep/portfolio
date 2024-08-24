@@ -36,7 +36,7 @@ const ProjectContent: React.FC = () => {
                 </div>
             </div>
             <Space />
-            <div id="ProjectComponents" className="w-full mx-auto px-3 sm:px-6">
+            <div id="ProjectComponents" className="w-full  mx-auto px-3 sm:px-6">
                 <GradientBorderBox>
                     <div id="Panel" className="flex flex-col justify-between align-items-center bg-[hsla(0,0%,100%,0.09)] rounded-xl md:rounded-md my-6 py-[12px] md:py-[30px] ">
                         <h2 className="font-bold text-4xl text-cyan-300 text-center mb-2 sm:mb-4 md:mb-8">Why?</h2>
@@ -44,7 +44,7 @@ const ProjectContent: React.FC = () => {
                     </div>
 
                     {/* Adjusted CSS for responsive layout */}
-                    <div id="GridTwoThird" className="flex flex-col gap-y-6 xl:grid xl:grid-flow-row xl:gap-x-6 xl:grid-cols-[1.25fr_2fr]">
+                    <div id="GridTwoThird" className="  flex flex-col gap-y-6 xl:grid xl:grid-flow-row xl:gap-x-6 xl:grid-cols-[1.25fr_2fr]">
                         <div id="Panel1" className="flex flex-col justify-between items-center bg-[hsla(0,0.00%,100.00%,0.09)] rounded-xl">
                             <div id="Panel1Body" className="relative z-[1] flex w-full flex-col justify-between items-stretch grow shrink-0 basis-auto mx-auto sm:p-9 p-6 lg:p-12">
                                 <h2 className="font-bold text-4xl text-cyan-300 text-center mb-2 sm:mb-4 rounded-lg p-4 md:mb-8 shadow-x bg-black">What?</h2>

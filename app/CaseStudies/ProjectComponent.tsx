@@ -51,7 +51,7 @@ export function ProjectComponent({
     return (
         <div
             className={cn(
-                `relative flex w-full  items-center justify-center overflow-hidden rounded-lg border-2 border-black bg-transparent p-10 md:shadow-xl ${heightClass}`,
+                `relative flex w-full  items-center justify-center overflow-hidden rounded-lg border-2 border-black bg-transparent p-10 md:shadow-xl  ${heightClass} `,
                 className,
             )}
             ref={containerRef}

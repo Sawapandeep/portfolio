@@ -39,19 +39,21 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     };
 
     return (
-        <div ref={ref} id='TimelineItem' className="grid grid-cols-1 md:grid-cols-[1fr_180px_1fr] gap-0 py-20 relative">
-            <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch">
-                <div id='TimelineDateContainer' className=" text-4xl md:text-6xl font-medium sticky top-[50vh]" >
-                    <h1 id="TimelineDateText" className="text-white">{StartDate}</h1>
+        <div ref={ref} id='TimelineItem' className="relative z-[2] grid auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-20  max-md:w-full max-md:grid-cols-[64px_1fr] max-sm:grid-cols-[48px_1fr]">
+            <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch max-md:text-left max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2">
+                {/* col-end-3  to 1*/}
+                <div id='TimelineDateText' className="  md:text-6xl font-medium sticky top-[50vh] max-md:mb-6 max-md:text-4xl text-white text-right max-md:text-left " >
+                    {/* <h1 id="TimelineDateText" className="text-white">{StartDate}</h1> */}
+                    {StartDate}
                 </div>
             </div>
-            <div id='TimelineCenter' className="flex justify-center">
-                <div id='TimelineCircle' className="bg-white rounded-full w-[15px] h-[15px] sticky top-[50vh] shadow-[0_0_0_4px_#0a0a0a]" />
+            <div id='TimelineCenter' className="flex justify-center max-md:justify-start max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:yrow-end-3 ">
+                <div id='TimelineCircle' className="sticky w-[15px] h-[15px] max-h-[15px] max-w-[15px] min-h-[15px] min-w-[15px] bg-white shadow-[0_0_0_8px_#0a0a0a] rounded-full top-[50vh]" ></div>
             </div>
-            <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b]">
+            <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b] max-md:col-start-2 max-md:col-end-3 max-md:row-start-2 max-md:row-end-3 ">
                 <div>
                     <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold pl-4 py-4'>{Title}</h1>
-                    {hasAnimated ? (
+                    {/* {hasAnimated ? (
                         <TextGenerate
                             words={Description}
                             className="text-xs md:text-sm font-medium leading-snug pl-4"
@@ -62,10 +64,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                         <div className="text-xs md:text-sm font-medium leading-snug pl-4">
                             {Description}
                         </div>
-                    )}
+                    )} */}
                 </div>
 
-                <div id='TimelineImageWrapper' className=" bg-opacity-70 p-5 rounded-lg">
+                <div id='TimelineImageWrapper' className="overflow-hidden bg-opacity-70 p-5 rounded-xl">
                     <Image
                         src={imgSrc}
                         alt={Title}
@@ -77,7 +79,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                 </div>
                 <button
                     onClick={handleMoreClick}
-                    className='border-2 rounded-lg border-white text-lg ml-4 mb-4'
+                    className='border-2 rounded-lg p-1 border-white text-lg ml-4 mb-4'
                 >
                     More.
                 </button>
@@ -89,10 +91,16 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 const Timeline: React.FC = () => {
     return (
         <div id='SectionTimeline' className="relative z-[-3]">
-            <div id='Container' className="mx-auto max-w-[1360px] px-4">
-                <div id='TimelineComponent' className="flex flex-col items-center justify-center relative">
-                    <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
-                    <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
+            <div id='Container' className="mx-auto w-[90vw] max-w-[1360px] px-4">
+                <div id='TimelineComponent' className="relative flex max-w-[1120px] flex-col justify-center items-center mx-auto max-md:flex max-md:auto-cols-[1fr] max-md:gap-x-4 max-md:gap-y-4 max-md:grid-cols-[1fr_1fr] max-md:grid-rows-[auto_auto]">
+                    {/* max-md:flex max-md:auto-cols-[1fr] max-md:gap-x-4 max-md:gap-y-4 max-md:grid-cols-[1fr_1fr] max-md:grid-rows-[auto_auto] */}
+                    <div id='TimelineProgress' className="absolute z-[-2] block w-[3px] h-full bg-[#414141] max-md:left-1.5" >
+
+                        {/* <div id='TimelineProgress' className="absolute max-md:left-1.5 left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2] " /> */}
+                        {/* //!add styles from id of  website:(https://sawapandeeps-dynamite-site.webflow.io/) */}
+                        {/* <div id='TimelineProgressBar' className="fixed left-1/2  max-md:left-1.5 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1] " ></div> */}
+                        <div id='TimelineProgressBar' className="fixed z-[-1] w-[3px] h-[50vh] bg-white bg-[linear-gradient(to_bottom,hsla(14.426229508196721,100.00%,64.12%,1.00),#ff4848_51%,#6248ff)] top-0 bottom-[50vh] inset-x-auto" ></div>
+                    </div>
                     {timelineData.projects.map((project) => (
                         <TimelineItem
                             key={project.id}
@@ -111,7 +119,6 @@ const Timeline: React.FC = () => {
 };
 
 export default Timeline;
-
 
 //!V8 befor sending just id
 // "use client";
