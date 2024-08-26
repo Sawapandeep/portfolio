@@ -26,6 +26,7 @@
 
 body {
   background-color: black;
+
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -50,4 +51,20 @@ h1,h2,p{
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.tracing-beam {
+  position: absolute;
+  left: 50px; /* Adjust according to your layout */
+  width: 2px;
+  background-color: cyan;
+  z-index: 100;
+  transition: height 0.1s linear, top 0.1s linear;
+}
+
+.start-div,
+.end-div {
+  position: absolute;
+  left: 10px; /* Adjust according to your layout */
+  font-weight: bold;
 }

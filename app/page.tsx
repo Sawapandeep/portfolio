@@ -1,10 +1,9 @@
-import GradientBorderBox from "./components/myui/GradientBorderBox";
 import Space from "./components/myui/Space";
 import HeroSection from "./containers/HeroSection";
 import MissionSection from "./containers/MissionSection";
 import Promo from "./containers/Promo";
 import SkillSection from "./containers/SkillsSection";
-import Timeline from "./containers/Timeline";
+import Timeline from "./containers/ProjectTimeline";
 import WBD from "./containers/WBD";
 
 
@@ -14,16 +13,16 @@ export default function Home() {
     <main >
       <div className="page-wrapper">
         <HeroSection />
-        <Space />
-        <MissionSection />
+        {/* <Space />
+        <MissionSection /> */}
         <Space />
         <SkillSection />
         <Space />
         {/* <ScrollHook><Timeline /></ScrollHook> */}
         <Timeline />
         <Space />
-        <Promo />
-        <Space />
+        {/* <Promo />
+        <Space /> */}
 
         {/* <WBD /> */}
         {/* <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

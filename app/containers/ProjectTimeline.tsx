@@ -1,7 +1,6 @@
 "use client";
 
-import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
-import timelineData from '@/app/data/timelinedata.json';
+import projectdata from '@/app/data/projectdata.json';
 import { useInView } from "framer-motion";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -9,15 +8,13 @@ import { useEffect, useRef, useState } from "react";
 
 interface TimelineItemProps {
     Title: string;
-    StartDate: string;
-    Description: string;
+    TimelineDate: string;
     Image: string;
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({
     Title,
-    StartDate,
-    Description,
+    TimelineDate,
     Image: imgSrc,
 }) => {
     const ref = useRef(null);
@@ -32,7 +29,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     }, [inView, hasAnimated]);
 
     const handleMoreClick = () => {
-        const projectId = timelineData.projects.find(proj => proj.Title === Title)?.id;
+        const projectId = projectdata.projects.find(proj => proj.Title === Title)?.id;
         if (projectId) {
             router.push(`/CaseStudies?id=${projectId}`);
         }
@@ -44,7 +41,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                 {/* col-end-3  to 1*/}
                 <div id='TimelineDateText' className="  md:text-6xl font-medium sticky top-[50vh] max-md:mb-6 max-md:text-4xl text-white text-right max-md:text-left " >
                     {/* <h1 id="TimelineDateText" className="text-white">{StartDate}</h1> */}
-                    {StartDate}
+                    {TimelineDate}
                 </div>
             </div>
             <div id='TimelineCenter' className="flex justify-center max-md:justify-start max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:yrow-end-3 ">
@@ -101,12 +98,11 @@ const Timeline: React.FC = () => {
                         {/* <div id='TimelineProgressBar' className="fixed left-1/2  max-md:left-1.5 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1] " ></div> */}
                         <div id='TimelineProgressBar' className="fixed z-[-1] w-[3px] h-[50vh] bg-white bg-[linear-gradient(to_bottom,hsla(14.426229508196721,100.00%,64.12%,1.00),#ff4848_51%,#6248ff)] top-0 bottom-[50vh] inset-x-auto" ></div>
                     </div>
-                    {timelineData.projects.map((project) => (
+                    {projectdata.projects.map((project) => (
                         <TimelineItem
                             key={project.id}
                             Title={project.Title}
-                            StartDate={project.StartDate}
-                            Description={project.Description}
+                            TimelineDate={project.TimelineDate}
                             Image={project.Image}
                         />
                     ))}
@@ -124,7 +120,7 @@ export default Timeline;
 // "use client";
 
 // import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
-// import timelineData from '@/app/data/timelinedata.json';
+// import projectdata from '@/app/data/projectdata.json';
 // import { useInView } from "framer-motion";
 // import Image from 'next/image';
 // import { useEffect, useRef, useState } from "react";
@@ -155,7 +151,7 @@ export default Timeline;
 //     }, [inView, hasAnimated]);
 
 //     const handleMoreClick = () => {
-//         const projectId = timelineData.projects.find(proj => proj.Title === Title)?.id;
+//         const projectId = projectdata.projects.find(proj => proj.Title === Title)?.id;
 //         if (projectId) {
 //             router.push(`/CaseStudies?id=${projectId}`);
 //         }
@@ -216,7 +212,7 @@ export default Timeline;
 //                 <div id='TimelineComponent' className="flex flex-col items-center justify-center relative">
 //                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
 //                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
-//                     {timelineData.projects.map((project) => (
+//                     {projectdata.projects.map((project) => (
 //                         <TimelineItem
 //                             key={project.id}
 //                             Title={project.Title}
@@ -239,7 +235,7 @@ export default Timeline;
 // "use client";
 
 // import { TextGenerate } from '@/app/components/acternityui/TextGenerate';
-// import timelineData from '@/app/data/timelinedata.json';
+// import projectdata from '@/app/data/projectdata.json';
 // import { useInView } from "framer-motion";
 // import Image from 'next/image';
 // import { useEffect, useRef, useState } from "react";
@@ -321,7 +317,7 @@ export default Timeline;
 //                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-black w-[3px] h-full z-[-2]" />
 //                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[rgb(255,116,72)] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
 //                     {/* Loop through the timeline data and render TimelineItems */}
-//                     {timelineData.projects.map((project, index) => (
+//                     {projectdata.projects.map((project, index) => (
 //                         <TimelineItem
 //                             key={project.id}
 //                             Title={project.Title}
@@ -344,7 +340,7 @@ export default Timeline;
 // "use client";
 
 // import Image from 'next/image';
-// import timelineData from '@/app/data/timelinedata.json'; // Importing the timeline data
+// import projectdata from '@/app/data/projectdata.json'; // Importing the timeline data
 // import { TextGenerate } from '@/app/components/acternityui/TextGenerate'; // Import the TextGenerate component
 
 // interface TimelineItemProps {
@@ -401,7 +397,7 @@ export default Timeline;
 //                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-gray-700 w-[3px] h-full z-[-2]" />
 //                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#ff7448] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
 //                     {/* Loop through the timeline data and render TimelineItems */}
-//                     {timelineData.projects.map((project, index) => (
+//                     {projectdata.projects.map((project, index) => (
 //                         <TimelineItem
 //                             key={index}
 //                             Title={project.Title}
@@ -422,7 +418,7 @@ export default Timeline;
 
 //!v6 importing data from timeline.json
 // import Image from 'next/image';
-// import timelineData from '@/app/data/timelinedata.json'; // Importing the timeline data
+// import projectdata from '@/app/data/projectdata.json'; // Importing the timeline data
 
 // interface TimelineItemProps {
 //     Title: string;
@@ -477,7 +473,7 @@ export default Timeline;
 //                     <div id='TimelineProgress' className="absolute left-1/2 -translate-x-1/2 bg-gray-700 w-[3px] h-full z-[-2]" />
 //                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#ff7448] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
 //                     {/* Loop through the timeline data and render TimelineItems */}
-//                     {timelineData.projects.map((project, index) => (
+//                     {projectdata.projects.map((project, index) => (
 //                         <TimelineItem
 //                             key={index}
 //                             Title={project.Title}
@@ -498,7 +494,7 @@ export default Timeline;
 
 //!v5 importing data from timeline.json (faced error)
 // import Image from 'next/image';
-// import timelineData from '@/app/data/timelinedata.json'; // Importing the timeline data
+// import projectdata from '@/app/data/projectdata.json'; // Importing the timeline data
 
 // interface TimelineItemProps {
 //     Title: string
@@ -557,7 +553,7 @@ export default Timeline;
 //                     <div id='TimelineProgressBar' className="fixed left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#ff7448] via-[#ff4848] to-[#6248ff] w-[3px] h-[50vh] top-0 z-[-1]" />
 
 //                     {/* Loop through the timeline data and render TimelineItems */}
-//                     {timelineData.projects.map((project, index) => (
+//                     {projectdata.projects.map((project, index) => (
 //                         <TimelineItem
 //                             key={index}
 //                             StartDate={new Date(project.StartDate).toLocaleDateString('en-US', {
@@ -761,7 +757,7 @@ export default Timeline;
 // export default Timeline;
 
 //!v2 using own data
-// import timelineData from '@/app/data/timelinedata.json'; // Adjust the path based on your file structure
+// import projectdata from '@/app/data/projectdata.json'; // Adjust the path based on your file structure
 // import Image from 'next/image';
 // import React from 'react';
 
@@ -795,7 +791,7 @@ export default Timeline;
 //                         <div id='TimelineProgress' className="absolute z-[-2] w-[3px] h-full bg-[#414141] left-[6px]:sm">
 //                             <div id="TimelineProgressBar" className="fixed z-[-1] w-[3px] h-[50vh] bg-white bg-[linear-gradient(180deg,hsla(14.426229508196721,100.00%,64.12%,1.00),#ff4848_51%,#6248ff)] top-0 bottom-[50vh] inset-x-auto"></div>
 //                         </div>
-//                         {timelineData.projects.map((project: Project, index: number) => (
+//                         {projectdata.projects.map((project: Project, index: number) => (
 //                             <div key={index} id='TimelineItem' className="relative z-[2] grid grid-flow-row auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-20 w-full sm:grid-cols-[64px_1fr] tiny:grid-cols-[48px_1fr]">
 //                                 <div id='TimelineLeft' className="justify-end items-stretch text-right sm:text-left">
 //                                     <p id='TimelinDate Text' className="sticky  text-5xl leading-[1.2] font-medium tracking-[-0.03em] top-[50vh] sm:text-4xl sm:mb-6">
@@ -844,18 +840,18 @@ export default Timeline;
 //                     </div>
 //                     <div id='TimelineItem' className="relative z-[2] grid grid-flow-row auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-20 w-full sm:grid-cols-[64px_1fr] tiny:grid-cols-[48px_1fr]">
 //                         <div id='TimelineLeft' className="justify-end items-stretch text-right sm:text-left">
-//                             <p className="sticky text-white text-5xl leading-[1.2] font-medium tracking-[-0.03em] top-[50vh] sm:text-4xl sm:mb-6"> {/*date  value from timelinedata.json*/}</p>
+//                             <p className="sticky text-white text-5xl leading-[1.2] font-medium tracking-[-0.03em] top-[50vh] sm:text-4xl sm:mb-6"> {/*date  value from projectdata.json*/}</p>
 //                         </div>
 //                         <div id='TimelineCentre' className="flex justify-center sm:justify-start">
 //                             <div id='TimelineCircle' className="sticky w-[15px] h-[15px] max-h-[15px] max-w-[15px] min-h-[15px] min-w-[15px] bg-white shadow-[0_0_0_8px_#0a0a0a] rounded-br-[100%] rounded-t-[100%] rounded-bl-[100%] top-[50vh]"></div>
 //                         </div>
 //                         <div id="TimelineRight">
 //                             <div id='TimelineRightHeading' className="mb-14 sm:mb-12">
-//                                 <p id='TimelineHedingText' className="text-white text-2xl leading-[1.3] font-medium sm:text-xl">{/*Title value from timelinedata.json*/}</p>
+//                                 <p id='TimelineHedingText' className="text-white text-2xl leading-[1.3] font-medium sm:text-xl">{/*Title value from projectdata.json*/}</p>
 //                             </div>
 //                         </div>
 //                         <div id="TimelineImageWrapper" className='overflow-hidden bg-[linear-gradient(138deg,hsla(0,0.00%,0.00%,1.00),hsla(0,0.00%,0.00%,0.00)_28%),@img\_66b49b60a0caf052653f16de] bg-[0px_0px,0px_0px] bg-[auto,cover] rounded-br-xl rounded-t-xl rounded-bl-xl '>
-//                             <Image src={/*image / video from timelinedata.json*/} alt="text" />
+//                             <Image src={/*image / video from projectdata.json*/} alt="text" />
 //                         </div>
 //                     </div>
 
