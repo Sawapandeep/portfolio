@@ -13,7 +13,7 @@ const TextCarousel: React.FC<TextCarouselProps> = ({ stages }) => {
             setCurrentStage((prevStage) =>
                 prevStage === stages.length - 1 ? 0 : prevStage + 1
             );
-        }, 10000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [stages.length]);

@@ -8,43 +8,46 @@
             "TimelineDate": "Apr 2023",
             "StartDate": "April 2023",
             "EndDate": " June 2023",
-            "Active": false,
+            "Active": true,
             "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
             "Stages": [
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+                "Created a web server that can listen to requests from users. This is like setting up a help desk that waits for people to ask for information.",
+                "Chose a specific website (I chose gamerant.com) as the source for fetching the latest news articles. Imagine this like picking a news source that you'll regularly check for updates.",
+                "Set up a system that responds to users when they request the latest news. This system fetches the data in real-time from the chosen website.",
+                "Ensured that only the most recent articles (I set it to articles within the last 6 hours) are kept, filtering out older news. This helps in providing up-to-date information to the users.",
+                "Once the news was fetched, it was neatly organized by details like title, description, publication time, images, and tags. The articles were then sorted by the most recent ones.",
+                "Made sure that the server could respond to requests from any location or website, allowing anyone to access the latest news regardless of where they're coming from."
             ],
             "Technologies": [
-                "Npm",
+                "NodeJS",
                 "Express",
                 "Axios",
                 "Cheerio",
                 "Cors"
             ],
-            "Livelink": "https: //trending-gaming-api.onrender.com/fetch",
+            "Livelink": "https://trending-gaming-api.onrender.com/fetch",
             "Srclink": "https://github.com/Sawapandeep/Web-scrapper-api",
             "BentoItems": [
                 {
                     "Title": "Target",
-                    "Description": "Selected a targetWebsite ",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Selected a target Website for this project i chose Gamerant",
+                    "Image": "https://th.bing.com/th/id/OIG1.bzHwwi2xS38Ul5Egod4F?pid=ImgGn",
                     "Video": ""
                 },
                 {
                     "Title": "Refrence",
-                    "Description": "Helpfull laces i glanced at",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Helpfull places i glanced at",
+                    "Image": "https://th.bing.com/th/id/OIG3.FiGQ9ADsxyTgGsc7MBKU?pid=ImgGn",
                     "Video": ""
                 },
                 {
-                    "Title": "Remark",
+                    "Title": "Remarks",
                     "Description": "My Conclusion",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Image": "https://th.bing.com/th/id/OIG2.u_q3gnPVzSbdBDVJyjqL?pid=ImgGn",
                     "Video": ""
                 }
             ],
-            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Image": "https://th.bing.com/th/id/OIG4.AFgNgPu2XB5cv0mP1J_a?pid=ImgGn",
             "Video": ""
         },
         {
@@ -56,45 +59,41 @@
             "StartDate": "June 2023",
             "EndDate": "August 2023",
             "Active": true,
-            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Problem": "",
             "Stages": [
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+                "Started by setting up a new project environment with the necessary tools and libraries for building a web application.",
+                "Designed the main part of the website that displays blog articles. This component fetches data from an online source and shows it on the page.",
+                "Used a custom-built web scraper API to retrieve the latest blog information. This API fetches data like images, titles, and links from an online source.",
+                "Implemented a way to convert and display the date information in a user-friendly format.",
+                "Created a layout to display the fetched blog articles on the page, including images, titles, and publication dates.",
+                "Used css to design the look and feel of the blog page, including how the loading animation and article sections appear.",
+                "Set up configuration files to manage the project's dependencies and build process, ensuring the project runs smoothly and is easy to maintain."
             ],
             "Technologies": [
-                "Next.js",
-                "Typescript",
-                "PostgreSQL",
-                "Prisma",
-                "TailwindCSS",
-                "Stripe",
-                "Shadcn UI",
-                "Magic UI"
+                "Axios",
+                "mdb-react-ui-ki",
+                "React",
+                "React-Router",
+                "React-bootstrap",
+                "emailjs"
             ],
             "Livelink": "https://horizon-iceberg.pages.dev/",
             "Srclink": "https://github.com/Sawapandeep/Horizon_Iceberg",
             "BentoItems": [
                 {
-                    "Title": "Target",
-                    "Description": "Selected a targetWebsite ",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
-                    "Video": ""
-                },
-                {
                     "Title": "Refrence",
-                    "Description": "Helpfull laces i glanced at",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Helpfull places i glanced at",
+                    "Image": "https://th.bing.com/th/id/OIG3.FiGQ9ADsxyTgGsc7MBKU?pid=ImgGn",
                     "Video": ""
                 },
                 {
-                    "Title": "Remark",
+                    "Title": "Remarks",
                     "Description": "My Conclusion",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Image": "https://th.bing.com/th/id/OIG2.u_q3gnPVzSbdBDVJyjqL?pid=ImgGn",
                     "Video": ""
                 }
             ],
-            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Image": "https://th.bing.com/th/id/OIG2.Z_J7xUGBiDFEM5FxIBwz?pid=ImgGn",
             "Video": ""
         },
         {
@@ -106,40 +105,45 @@
             "StartDate": "December 2023",
             "EndDate": "March 2024",
             "Active": false,
-            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Problem": "",
             "Stages": [
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+                "Created a server to handle requests and manage malware scans. Used tools and technologies for setting up the server, including a system for handling file uploads.",
+                "Incorporated a malware scanning tool to check uploaded files for potential threats. This tool analyzes the files and determines if they are clean or infected.",
+                "Added functionality to allow users to upload files for scanning. Set up limits on file size and managed where the uploaded files are stored temporarily.",
+                "Set up a system to save the results of malware scans, including whether a file was clean or infected, into a Firebase",
+                "Used a Firebase to store and retrieve information about the scanned files. This included details like file names, scan results, and timestamps.",
+                "Implemented a way to fetch and display stored scan results. This feature allows users to view past scan results from the database.",
+                "Added error handling to manage situations where things might go wrong, such as issues during file scanning or database operations.",
+                "Launched the server to listen for incoming requests and process them as needed. Ensured it runs on a specified port to handle communication from users."
             ],
             "Technologies": [
-                "express",
-                "clamdAV",
-                ""
+                "Express",
+                "Express_fileupload",
+                "ClamAV",
+                "Child_process",
+                "Cors",
+                "Exec-sh",
+                "Firebase",
+                "Firebase_admin",
+                "Multer"
             ],
-            "Livelink": "https://dictionary-api-ftv7.onrender.com",
-            "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
+            "Livelink": "https://malware-analysis.pages.dev/",
+            "Srclink": "https://github.com/Sawapandeep/Malware_Analysis_Backend",
             "BentoItems": [
                 {
-                    "Title": "Target",
-                    "Description": "Selected a targetWebsite ",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
-                    "Video": ""
-                },
-                {
                     "Title": "Refrence",
-                    "Description": "Helpfull laces i glanced at",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Helpfull places i glanced at",
+                    "Image": "https://th.bing.com/th/id/OIG3.FiGQ9ADsxyTgGsc7MBKU?pid=ImgGn",
                     "Video": ""
                 },
                 {
-                    "Title": "Remark",
+                    "Title": "Remarks",
                     "Description": "My Conclusion",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Image": "https://th.bing.com/th/id/OIG2.u_q3gnPVzSbdBDVJyjqL?pid=ImgGn",
                     "Video": ""
                 }
             ],
-            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Image": "https://th.bing.com/th/id/OIG1.Af1inMihiocfA3poV3hE?pid=ImgGn",
             "Video": ""
         },
         {
@@ -150,41 +154,49 @@
             "TimelineDate": "Jul 2024",
             "StartDate": "July 2024",
             "EndDate": " July 2024",
-            "Active": false,
-            "Problem": "Manually gathering data from multiple web sources is time-consuming and prone to human error. A web scraper bot automates this process, ensuring faster and more accurate data collection.",
+            "Active": true,
+            "Problem": "",
             "Stages": [
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch.",
-                "Developed an API to fetch the latest gaming news from GameRant, updated on every refresh/fetch."
+                "A web server was created to listen for requests from users. Think of this as setting up a service desk where users can ask for word meanings or random word suggestions.",
+                "The project started by reading a file (data.csv) that contains a list of words and their meanings. This file acts like a dictionary database.",
+                "The words and their meanings were organized into a list that the server can easily access. Each word was given a unique ID to keep track of them.",
+                "A system was implemented to ensure that when users request random words, they don't get the same word repeatedly. This helps in providing fresh content every time.",
+                "Made sure that the server could respond to requests from any IP address, allowing users to access the dictionary service from anywhere.",
+                "Several Endpoints were set up: Random Word Endpoint, Random 30 Words Endpoint and Word Lookup Endpoint.",
+                "When users request words or meanings, the server responds by providing the requested information. If a word isn't found, the server notifies the user.",
+                "After everything was set up, the server was started and tested to ensure it was working correctly. The project was confirmed to be running smoothly and ready to handle requests.",
+                "Once the server was running, it printed a message indicating that it was ready to receive and respond to dictionary-related requests at a specific web address."
             ],
             "Technologies": [
-                "express",
-                "ss",
-                "s"
+                "NodeJS",
+                "Express",
+                "Axios",
+                "Csv-parser",
+                "Cors"
             ],
             "Livelink": "https://dictionary-api-ftv7.onrender.com",
-            "Srclink": "https://github.com/Sawapandeep/dictionary_api/tree/master",
+            "Srclink": "https://github.com/Sawapandeep/dictionary_api",
             "BentoItems": [
                 {
                     "Title": "Target",
-                    "Description": "Selected a targetWebsite ",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Selected a source for the all the data to be dislay, i intianlly planned using a sql file, but later found out it was relitvely ancient(2014), so i went ahead with a csv file",
+                    "Image": "https://th.bing.com/th/id/OIG1.bzHwwi2xS38Ul5Egod4F?pid=ImgGn",
                     "Video": ""
                 },
                 {
                     "Title": "Refrence",
-                    "Description": "Helpfull laces i glanced at",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Description": "Helpfull places i glanced at",
+                    "Image": "https://th.bing.com/th/id/OIG3.FiGQ9ADsxyTgGsc7MBKU?pid=ImgGn",
                     "Video": ""
                 },
                 {
-                    "Title": "Remark",
+                    "Title": "Remarks",
                     "Description": "My Conclusion",
-                    "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+                    "Image": "https://th.bing.com/th/id/OIG2.u_q3gnPVzSbdBDVJyjqL?pid=ImgGn",
                     "Video": ""
                 }
             ],
-            "Image": "https://sawapan.vercel.app/_next/static/media/possibility.5fb2b6d5.png",
+            "Image": "https://th.bing.com/th/id/OIG3.3inJ0Fnn78Ibc9g1pWi6?pid=ImgGn",
             "Video": ""
         }
     ]

@@ -19,6 +19,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+html {
+  background-color: black;
+}
+
 *{
   /* outline: 1px solid lime; */
   
