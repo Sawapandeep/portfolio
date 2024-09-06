@@ -1,0 +1,76 @@
+.pendulum-container {
+    --uib-size: 78px;
+    --uib-color: black;
+    --uib-speed: 1.4s;
+    position: relative;
+    top: 28%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: var(--uib-size);
+  }
+  
+  .dot {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+    animation: swing var(--uib-speed) ease-in-out infinite;
+  }
+  
+  .dot::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot:nth-child(2),
+  .dot:nth-child(4) {
+    animation: swing-reverse var(--uib-speed) ease-in-out infinite;
+  }
+  
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(70deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-70deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes swing-reverse {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-70deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(70deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  

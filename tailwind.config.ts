@@ -21,6 +21,7 @@ const config: Config = {
         fadeIn: 'fadeIn 1s ease-out',
         grid: "grid 15s linear infinite",
         gradient: 'gradient 5s ease infinite',
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       transform: {
         'translate-z-10': 'translateZ(10px)',
@@ -45,6 +46,16 @@ const config: Config = {
         grid: {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(0)" },
+        },
+        spotlight: {
+          "0%": {
+            opacity: '0',
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: '1',
+            transform: "translate(-50%,-40%) scale(1)",
+          },
         },
     },
   },
