@@ -1,7 +1,6 @@
 'use client';
-
-import React, { useEffect } from 'react';
 import { newtonsCradle } from 'ldrs';
+import React, { useEffect } from 'react';
 
 const NewtonCradle: React.FC = () => {
     useEffect(() => {
@@ -13,10 +12,9 @@ const NewtonCradle: React.FC = () => {
 
     return (
         <>
-            {/* Dynamically rendered custom element */}
             {
                 typeof window !== 'undefined' && (
-                    <l-newtons-cradle size="78" speed="1.4" color="white"></l-newtons-cradle>
+                    <l-newtons-cradle size="78" speed="1.4" color="white" />
                 )
             }
         </>
