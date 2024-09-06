@@ -39,6 +39,7 @@
 
 // !v1
 import api from './api.svg';
+import bg from './bg.svg';
 import code from './code.svg';
 import cplusplus from './cplusplus.svg';
 import css3 from "./css3.svg";
@@ -62,5 +63,5 @@ import vscode from './vscode.svg';
 
 
 
-export { api, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, up, user, vercel, vscode };
+export { api, bg, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, up, user, vercel, vscode };
 

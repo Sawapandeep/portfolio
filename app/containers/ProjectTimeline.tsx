@@ -53,15 +53,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 
     return (
         <div ref={ref} id='TimelineItem' className="relative z-[2] grid auto-cols-[1fr] gap-x-0 gap-y-0 grid-cols-[1fr_180px_1fr] grid-rows-[auto] py-10 max-md:w-full max-md:grid-cols-[64px_1fr] max-sm:grid-cols-[48px_1fr]">
-            <div id='TimelineLeft' className="text-right md:justify-end md:items-stretch max-md:text-left max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2">
-                <div id='TimelineDateText' className="md:text-6xl font-medium sticky top-[50vh] max-md:mb-6 max-md:text-4xl text-white text-right max-md:text-left">
-                    {TimelineDate}
-                </div>
-            </div>
-            <div id='TimelineCenter' className="flex justify-center max-md:justify-start max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:row-end-3">
-                <div id='TimelineCircle' className="sticky w-[15px] h-[15px] max-h-[15px] max-w-[15px] min-h-[15px] min-w-[15px] bg-white shadow-[0_0_0_8px_#0a0a0a] rounded-full top-[50vh]"></div>
-            </div>
-            <div id='TimelineRight' className="mb-8 rounded-3xl border-2 border-[#1e293b] max-md:col-start-2 max-md:col-end-3 max-md:row-start-2 max-md:row-end-3">
+            <div id='TimelineLeft' className="text-left rounded-3xl border-2 border-[#1e293b] md:justify-end md:items-stretch max-md:text-left  max-md:col-start-2 max-md:col-end-3 max-md:row-start-2 max-md:row-end-3
+            
+            ">
                 <div className="relative">
                     <h1 id="TimelineRightHeading" className='text-lg md:text-2xl font-bold pl-4 py-4'>
                         {Title}
@@ -78,9 +72,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                     <Image
                         src={imgSrc}
                         alt={Title}
-                        width={480}
-                        height={270}
-                        className="rounded-lg"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg aspect-auto"
                         priority
                     />
                 </div>
@@ -92,6 +86,16 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                         More
                     </button>
                 </div>
+
+            </div>
+            <div id='TimelineCenter' className="flex justify-center max-md:justify-start max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:row-end-3">
+                <div id='TimelineCircle' className="sticky w-[15px] h-[15px] max-h-[15px] max-w-[15px] min-h-[15px] min-w-[15px] bg-white shadow-[0_0_0_8px_#0a0a0a] rounded-full top-[50vh]"></div>
+            </div>
+            <div id='TimelineRight' className="mb-8 max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2 ">
+                <div id='TimelineDateText' className="md:text-6xl font-medium sticky top-[50vh] max-md:mb-6 max-md:text-4xl text-white text-left max-md:text-left">
+                    {TimelineDate}
+                </div>
+
             </div>
         </div>
     );

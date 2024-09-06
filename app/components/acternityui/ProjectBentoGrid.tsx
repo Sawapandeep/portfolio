@@ -99,7 +99,7 @@ const ProjectBentoGrid = ({ bentoItems, projectType }: { bentoItems: any[], proj
                                 alt={item.Title}
                                 width={500}
                                 height={150}
-                                className="w-full rounded-xl"
+                                className="w-[65%] mx-auto rounded-xl"
                                 style={{ objectFit: "cover" }}
                             />
                         )
