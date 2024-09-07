@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import { Spotlight } from '../components/acternityui/Spotlight';
 import { WavyBackground } from '../components/acternityui/WavyBackground';
-import WBD from './WBD';
+import Reality from '@/public/Images/Reality.png';
 const TimelineHeader = () => {
     return (
         <WavyBackground>
-            <div id="TimelineHeader" className="z-10">
+            <div id="TimelineHeader" className="z-10" >
                 <div id="TimelineHeaderContainer" className="w-[90vw] max-w-[1360px] mx-auto">
                     <div id="PaddingContainer" className="py-[120px] max-md:py-[90px]">
                         <div id="TimelineHeaderWrapper" className="max-w-screen-sm text-white text-center mx-auto relative">
@@ -14,13 +15,15 @@ const TimelineHeader = () => {
                                 <h1 id="HeadingTimeline" className="text-white font-medium text-5xl">
                                     Originating My Ideas into Reality
                                 </h1>
+                                {/* <Image src={Reality} alt="Reality" width={1080} height={100} /> */}
                             </div>
                             <p id="ParagraphTimeline" className="max-md:text-sm+ text-xl font-light"></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </WavyBackground>
+
     );
 }
 

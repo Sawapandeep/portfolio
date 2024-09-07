@@ -122,7 +122,7 @@ export const WavyBackground = ({
         <div
             ref={containerRef}
             className={cn(
-                "relative w-full h-full",
+                "relative w-full h-full bg-black",
                 containerClassName
             )}
         >
