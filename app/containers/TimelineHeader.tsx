@@ -1,10 +1,7 @@
-import Image from 'next/image';
-import { Spotlight } from '../components/acternityui/Spotlight';
 import { WavyBackground } from '../components/acternityui/WavyBackground';
-import Reality from '@/public/Images/Reality.png';
 const TimelineHeader = () => {
     return (
-        <WavyBackground>
+        <WavyBackground >
             <div id="TimelineHeader" className="z-10" >
                 <div id="TimelineHeaderContainer" className="w-[90vw] max-w-[1360px] mx-auto">
                     <div id="PaddingContainer" className="py-[120px] max-md:py-[90px]">

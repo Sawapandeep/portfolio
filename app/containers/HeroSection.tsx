@@ -23,7 +23,7 @@ const HeroSection = () => {
             <div id="heroContainer" className="relative z-10 overflow-visible max-w-none order-none pb-0">
                 <div id="heroQuickstack" className="grid grid-cols-2 grid-rows-none max-md:flex max-md:flex-col w-auto max-w-[60vw] gap-x-0 gap-y-0.5 mb-0 px-0 py-2.5">
                     <div id="heroCell1" className="flex flex-col justify-center flex-nowrap items-baseline cursor-text pl-0">
-                        <h1 id="heroHeading" className={`${ibm.className} self-start grow-0 shrink basis-auto font-semibold text-4xl leading-10`}> <FlipWords words={words} /> <br />
+                        <h1 id="heroHeading" className={`${ibm.className} self-start grow-0 shrink basis-auto font-medium text-5xl leading-10`}> <FlipWords words={words} /> <br />
                             i'm
                             <br />
                             sawapan
@@ -32,7 +32,7 @@ const HeroSection = () => {
                             Visioning to craft visually stunning, user-friendly websites that provide unforgettable user experience. Using trusted techniques and deep understanding and user needs.
                         </p>
                     </div>
-                    <div id="heroCell2" className="block flex-row justify-center flex-nowrap items-center bg-clip-content pt-0 max-md:hidden">
+                    <div id="heroCell2" className="block flex-row justify-center flex-nowrap items-center bg-clip-content pt-0">
                         <Image src={myImage} alt="myImage" className="self-auto align-baseline object-fill relative z-20" />
                     </div>
                     <div id="heroCell3" className="flex flex-row justify-between flex-nowrap items-center">
