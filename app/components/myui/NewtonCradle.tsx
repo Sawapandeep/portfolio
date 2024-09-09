@@ -14,6 +14,7 @@ const NewtonCradle: React.FC = () => {
         <>
             {
                 typeof window !== 'undefined' && (
+                    // @ts-ignore 
                     <l-newtons-cradle size="78" speed="1.4" color="white" />
                 )
             }

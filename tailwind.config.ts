@@ -25,8 +25,12 @@ const config: Config = {
       },
       transform: {
         'translate-z-10': 'translateZ(10px)',
-        // Add more values if needed
       },
+      transitionDuration: {
+       
+        '850': '850ms',
+      },
+     
       keyframes: {
         gradient: {
           '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
