@@ -28,14 +28,14 @@ const HeroSection = () => {
                             <br />
                             sawapan
                         </h1>
-                        <p id="heroParagrah" className="static overflow-visible self-start grow-0 shrink basis-auto aspect-auto text-left cursor-auto object-contain mt-2.5 font-medium text-xl leading-5">
+                        <p id="heroParagrah" className="static overflow-visible self-start grow-0 shrink basis-auto aspect-auto text-left cursor-auto object-contain mt-2.5 font-medium max-md:text-xl max-md:leading-5 text-2xl leading-[1]">
                             Visioning to craft visually stunning, user-friendly websites that provide unforgettable user experience. Using trusted techniques and deep understanding and user needs.
                         </p>
                     </div>
                     <div id="heroCell2" className="block flex-row justify-center flex-nowrap items-center bg-clip-content pt-0">
                         <Image src={myImage} alt="myImage" className="self-auto align-baseline object-fill relative z-20" />
                     </div>
-                    <div id="heroCell3" className="flex flex-row justify-between flex-nowrap items-center">
+                    <div id="heroCell3" className="flex flex-row justify-between flex-nowrap items-center hidden">
                         <button id="heroButton" className="static overflow-visible box-border clear-none aspect-auto bg-transparent text-center no-underline object-fill pl-2 pr-2.5 py-2 rounded-full border-2 border-white text-2xl text-white leading-5" onClick={() => console.log("first")}>
                             <span id="hi">→ say hi</span>
                         </button>
