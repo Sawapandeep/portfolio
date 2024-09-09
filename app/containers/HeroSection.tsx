@@ -32,7 +32,7 @@ const HeroSection = () => {
                             Visioning to craft visually stunning, user-friendly websites that provide unforgettable user experience. Using trusted techniques and deep understanding and user needs.
                         </p>
                     </div>
-                    <div id="heroCell2" className="block flex-row justify-center flex-nowrap items-center bg-clip-content pt-0">
+                    <div id="heroCell2" className="block flex-row justify-center flex-nowrap items-center bg-clip-content pt-0 max-sm:hidden">
                         <Image src={myImage} alt="myImage" className="self-auto align-baseline object-fill relative z-20" />
                     </div>
                     <div id="heroCell3" className="flex flex-row justify-between flex-nowrap items-center hidden">
