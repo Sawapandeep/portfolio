@@ -14,7 +14,7 @@ import {
     react,
     tailwind,
     typescript,
-    user,
+    laptop,
     vscode
 } from "@/public/Svg/import";
 import Image from "next/image";
@@ -97,7 +97,7 @@ export default function SkillSection() {
         { src: firebase, alt: "Firebase" },
         { src: nodejs, alt: "Node.js" },
         { src: tailwind, alt: "Tailwind" },
-        { src: user, alt: "My Skills" },
+        { src: laptop, alt: "My Skills" },
         { src: figma, alt: "Figma" },
         { src: express, alt: "Express" },
         { src: vscode, alt: "VS Code" },
@@ -115,7 +115,7 @@ export default function SkillSection() {
             <h1 className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full text-3xl text-center leading-5 z-20 mt-10">
                 My Skills?
             </h1>
-            <div className="flex size-full flex-col max-w-lg mt-10 items-stretch justify-between gap-10">
+            <div className="flex w-[85%] h-full flex-col max-w-lg mt-10 items-stretch justify-between gap-10">
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={divRefs[12]} altText={skills[12].alt}>
                         <Image src={skills[12].src} alt={skills[12].alt} />

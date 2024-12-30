@@ -34,6 +34,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'th.bing.com',
       },
+      
     ],
   },
 };

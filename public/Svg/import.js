@@ -51,6 +51,7 @@ import globe from "./globe.svg";
 import html from './html.svg';
 import java from './java.svg';
 import javascript from './javascript.svg';
+import laptop from "./laptop.svg";
 import nextjs from './nextjs.svg';
 import nodejs from './nodejs.svg';
 import react from './react.svg';
@@ -63,5 +64,5 @@ import vscode from './vscode.svg';
 
 
 
-export { api, bg, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, nextjs, nodejs, react, tailwind, typescript, up, user, vercel, vscode };
+export { api, bg, code, cplusplus, css3, express, figma, firebase, github, globe, html, java, javascript, laptop, nextjs, nodejs, react, tailwind, typescript, up, user, vercel, vscode };
 
