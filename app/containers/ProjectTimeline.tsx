@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 
 import projectdata from '@/app/data/projectdata.json';
 import { useInView } from "framer-motion";
@@ -84,7 +84,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                 <div className="flex justify-end px-2 md:px-4">
                     <button
                         onClick={handleMoreClick}
-                        className={`border-2 rounded-lg px-2 md:px-4 border-[#1e293b] text-lg text-white mb-4 hover:border-[#6797e4]`}
+                        className={`border-2 rounded-lg px-2 md:px-4 border-[#1e293b] text-lg text-white mb-4 hover:border-[#6797e4] duration-400`}
                     >
                         More
                     </button>
