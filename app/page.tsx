@@ -7,6 +7,7 @@ import HeroSection from './containers/HeroSection';
 import Timeline from './containers/ProjectTimeline';
 import SkillSection from './containers/SkillsSection';
 import TimelineHeader from './containers/TimelineHeader';
+import PopUp from './containers/PopUp';
 
 export default function Home() {
   // Scroll to top when the component mounts
@@ -24,6 +25,7 @@ export default function Home() {
         <Space />
         <Timeline />
         <Space />
+        <PopUp/>
         <Footer />
       </div>
     </main>

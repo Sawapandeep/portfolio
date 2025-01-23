@@ -1,0 +1,37 @@
+{
+    "notifications":[
+        {
+            "name": "Persona",
+            "description": "Project on differnt subjects with a sense of their capabilities in their feild, with feats tey achieved",
+            "time": " TBD",
+
+            "icon": "🧑‍💻",
+            "color": "#d035a9"
+        },
+        {
+            "name": "Persona",
+            "description": "Project on differnt subjects with a sense of their capabilities in their feild, with feats tey achieved",
+            "time": " TBD",
+
+            "icon": "🧑‍💻",
+            "color": "#d035a9"
+        },
+        {
+            "name": "Persona",
+            "description": "Project on differnt subjects with a sense of their capabilities in their feild, with feats tey achieved",
+            "time": " TBD",
+
+            "icon": "🧑‍💻",
+            "color": "#d035a9"
+        },
+        {
+            "name": "",
+            "description": "",
+            "time": "TBD",
+
+            "icon": "🧑‍💻",
+            "color": "#d035a9"
+        }
+        
+    ]
+}
