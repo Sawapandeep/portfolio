@@ -25,7 +25,7 @@ export default function Home() {
         <Space />
         <Timeline />
         <Space />
-        <PopUp/>
+        {/* <PopUp/> */}
         <Footer />
       </div>
     </main>
