@@ -47,7 +47,7 @@ const ProjectContent: React.FC = () => {
                                 {project.Description}
                             </h2>
                         </div>
-                        <Image className="rounded-[6px] md:rounded-[12px] mx-auto md:w-[65vw] lg:w-auto" src={project.Image} alt="ProjectImage" width={500} height={270} />
+                        <Image className="rounded-[6px] md:rounded-[12px] mx-auto md:w-[65vw] lg:w-[50vw]" src={project.Image} alt="ProjectImage" width={500} height={270} />
                     </div>
                 </div>
             </div>
