@@ -71,7 +71,7 @@
             ],
             "Technologies": [
                 "Axios",
-                "mdb-react-ui-ki",
+                "mdb-react-ui-kit",
                 "React",
                 "React-Router",
                 "React-bootstrap",
@@ -153,7 +153,7 @@
             "Description": "Discover words effortlessly with our Dictionary API: quick, reliable, and packed with random word magic!",
             "TimelineDate": "Jul 2024",
             "StartDate": "July 2024",
-            "EndDate": " July 2024",
+            "EndDate": " September 2024",
             "Active": true,
             "Problem": "",
             "Stages": [
